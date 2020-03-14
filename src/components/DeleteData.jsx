@@ -16,7 +16,6 @@ class DeleteData extends Component {
         });
       if (status !== 400 || status !== 405) {
         alert("Data Deleted Successfully!");
-        id = "";
       }
     };
     const handleChange = e => {

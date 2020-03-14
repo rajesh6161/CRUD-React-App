@@ -31,15 +31,20 @@ class UpdateData extends Component {
       email: email,
       year: year
     };
+    let status;
     e.preventDefault();
     axios
       .put(`https://ecell.nitrr.ac.in/events/cadets/${this.state.id}/`, datas)
       .then(res => {
         console.log(res);
+        status = res.status;
       })
       .catch(err => {
         console.log(err);
       });
+    if (status !== 400 || status !== 405) {
+      alert("Data Updated Successfully!");
+    }
   };
 
   render() {
