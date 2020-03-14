@@ -3,7 +3,7 @@ import axios from "axios";
 
 class UpdateData extends Component {
   state = {
-    id: 39,
+    id: "",
     name: "",
     venue: "",
 
@@ -12,8 +12,7 @@ class UpdateData extends Component {
     details: "",
 
     email: "",
-    year: "",
-    status: ""
+    year: ""
   };
   changeHandler = e => {
     this.setState({
@@ -21,41 +20,21 @@ class UpdateData extends Component {
     });
   };
 
-  submitHandler = e => {
+  updateData = e => {
+    const { name, venue, time, details, email, year } = this.state;
+    const datas = {
+      name: name,
+      venue: venue,
+      time: time,
+      details: details,
+      email: email,
+      year: year
+    };
     e.preventDefault();
-    console.log(this.state);
     axios
-      .post("https://ecell.nitrr.ac.in/events/cadets/?format=json", this.state)
+      .put(`https://ecell.nitrr.ac.in/events/cadets/${this.state.id}/`, datas)
       .then(res => {
         console.log(res);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
-
-  updateData = () => {
-    axios
-      .put(
-        `https://ecell.nitrr.ac.in/events/cadets/${this.state.id}/`,
-        this.state
-      )
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
-
-  delete = e => {
-    e.preventDefault();
-
-    axios
-      .delete(`https://ecell.nitrr.ac.in/events/cadets/${this.state.id}/`)
-      .then(res => {
-        console.log(res.status);
-        this.state.status = res.status;
       })
       .catch(err => {
         console.log(err);
@@ -64,10 +43,22 @@ class UpdateData extends Component {
 
   render() {
     console.log(this.state.status);
-    const { name, venue, time, details, email, year } = this.state;
+
+    const { id, name, venue, time, details, email, year } = this.state;
+
     return (
-      <div className="container">
-        <form onSubmit={this.submitHandler}>
+      <div className="container form-container update-component">
+        <h2 className="center">Update Data</h2>
+        <form>
+          <div>
+            <p>id:</p>
+            <input
+              type="text"
+              name="id"
+              value={id}
+              onChange={this.changeHandler}
+            />
+          </div>
           <div>
             <p>Name:</p>
             <input

@@ -9,8 +9,8 @@ const App = () => {
     <div>
       <GetData />
       <CreateData />
-      <DeleteData />
       <UpdateData />
+      <DeleteData />
     </div>
   );
 };

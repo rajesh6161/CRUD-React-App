@@ -21,14 +21,18 @@ class DeleteData extends Component {
     //   console.log(id);
     // };
     return (
-      <div className="container">
+      <div className="container form-container delete-component">
+        <h2 className="center">Delete Data</h2>
         <form>
           <p>Enter the id to delete:</p>
           <input type="text" onChange={handleChange} />
+          <button
+            className="btn waves-effect waves-light"
+            onClick={handleDelete}
+          >
+            Delete Data
+          </button>
         </form>
-        <button className="btn waves-effect waves-light" onClick={handleDelete}>
-          Delete Data
-        </button>
       </div>
     );
   }
