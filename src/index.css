@@ -1,13 +1,62 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: beige;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.displayData {
+  margin-top: 30px;
+
+  display: grid;
+  column-gap: 30px;
+  row-gap: 30px;
+  border: 5px solid #333;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.cadets-div {
+  background-color: yellow;
+  padding-left: 30px;
+  font-size: 22px;
+  width: 100%;
+}
+.cadets-div p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  color: #1d9af2;
+  background-color: #292d3e;
+  border: 1px solid #1d9af2;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 32px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  transform: scale(0.8);
+}
+.form-container form {
+  border: 2px dashed #333;
+  padding: 55px;
+}
+.send,
+.updateBtn {
+  width: 100%;
+  height: 55px;
+  margin-bottom: -45px;
+}
+@media (max-width: 480px) {
+  .displayData {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cadets-div {
+    background-color: yellow;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+  }
 }
