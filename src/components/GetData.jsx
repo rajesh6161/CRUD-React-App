@@ -23,26 +23,32 @@ class GetData extends Component {
             <p>
               id: <span>{post.id}</span>
             </p>
+            <hr />
             <p>
               Name: <span>{post.name}</span>
             </p>
+            <hr />
             <p>
               Venue: <span>{post.venue}</span>
             </p>
+            <hr />
             <p>
               Date:{" "}
               <span>{post.date === null ? "Date Unavailable" : post.date}</span>
             </p>
-
+            <hr />
             <p>
               Time: <span>{post.time}</span>
             </p>
+            <hr />
             <p>
               Details: <span>{post.details}</span>
             </p>
+            <hr />
             <p>
               Email: <span>{post.email}</span>
             </p>
+            <hr />
             <p>
               Year: <span>{post.year}</span>
             </p>
