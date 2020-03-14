@@ -64,7 +64,6 @@ class UpdateData extends Component {
 
   render() {
     console.log(this.state.status);
-
     const { name, venue, time, details, email, year } = this.state;
     return (
       <div className="container">
