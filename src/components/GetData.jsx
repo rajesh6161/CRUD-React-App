@@ -20,7 +20,7 @@ class GetData extends Component {
     const list = datas.length ? (
       datas.map(post => {
         return (
-          <Flip>
+          <Flip bottom>
             <div className="cadets-div" key={post.id}>
               <p>
                 id: <span>{post.id}</span>

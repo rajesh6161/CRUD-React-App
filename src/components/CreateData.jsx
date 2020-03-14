@@ -32,7 +32,9 @@ class CreateData extends Component {
     const { name, venue, time, details, email, year } = this.state;
     return (
       <div className="container form-container create-data-component">
-        <h2 className="center">Fill Data Here to Post</h2>
+        <h2 className="center">
+          <span style={{ color: "#1d9af2" }}>Create</span> Post
+        </h2>
         <form onSubmit={this.submitHandler}>
           <div>
             <p>Name:</p>
