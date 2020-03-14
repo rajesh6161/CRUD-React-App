@@ -36,7 +36,7 @@ class DeleteData extends Component {
             onClick={handleDelete}
           >
             Delete Data
-            <i class="fas fa-trash-alt"></i>
+            <i className="fas fa-trash-alt"></i>
           </button>
         </form>
       </div>

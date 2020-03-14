@@ -1,5 +1,4 @@
 import React from "react";
-import Jump from "react-reveal/Jump";
 import GetData from "./components/GetData";
 import UpdateData from "./components/UpdateData";
 import CreateData from "./components/CreateData";

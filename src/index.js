@@ -2,10 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import Post from "./Post";
+
 import * as serviceWorker from "./serviceWorker";
-import CreateData from "./components/CreateData";
-import UpdateData from "./components/UpdateData";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
