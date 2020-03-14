@@ -92,3 +92,6 @@ form div {
 .delete-component button:hover {
   background-color: #e53935;
 }
+i {
+  padding-left: 5px;
+}
