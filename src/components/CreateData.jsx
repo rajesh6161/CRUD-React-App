@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+
 class CreateData extends Component {
   state = {
     name: "",
@@ -11,6 +12,7 @@ class CreateData extends Component {
     email: "",
     year: ""
   };
+
   changeHandler = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -23,6 +25,9 @@ class CreateData extends Component {
       .post("https://ecell.nitrr.ac.in/events/cadets/?format=json", this.state)
       .then(res => {
         console.log(res);
+        if (res.status !== 405 || res.status !== 400 || res.status !== 404) {
+          alert("Data submitted successfully!");
+        }
       })
       .catch(error => {
         console.log(error);
